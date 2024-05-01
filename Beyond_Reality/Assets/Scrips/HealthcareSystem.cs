@@ -6,7 +6,7 @@ using UnityEngine;
 public class HealthcareSystem : MonoBehaviour
 {
     public float Health = 21f;
-    public float DamageFloor = 20f;
+    public float Damage = 10f;
     public float HealthRecuperation = 25f;
     //public PlayerController playerController;
     public SpawnSystem spawnSystem;
@@ -21,9 +21,9 @@ public class HealthcareSystem : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Suelo"))
+        if (collision.gameObject.CompareTag("Enemigo"))
         {
-            Health -= DamageFloor;
+            Health -= Damage;
         }
     }
     private void OnTriggerStay(Collider collider)

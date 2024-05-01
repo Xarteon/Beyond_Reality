@@ -22,10 +22,7 @@ public class PlayerController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        if (horizontal != 0 || vertical != 0)
-        {
-            transform.forward = new Vector3(horizontal, 0, vertical);
-        }
-        rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, vertical * speed);
+        transform.Rotate(0, horizontal * Time.deltaTime * 90, 0);
+        rb.velocity = new Vector3(transform.forward.x * vertical * speed, rb.velocity.y, transform.forward.z * vertical * speed);
     }
 }
