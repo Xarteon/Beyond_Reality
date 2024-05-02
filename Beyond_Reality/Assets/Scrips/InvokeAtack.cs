@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class InvokeAtack : MonoBehaviour
@@ -11,7 +12,6 @@ public class InvokeAtack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(PonyObject, new Vector3(xPoint, -4, zPoint), Quaternion.identity);
         StartCoroutine(Spawn());
     }
     private IEnumerator Spawn()
@@ -20,7 +20,7 @@ public class InvokeAtack : MonoBehaviour
         {
             xPoint = Random.Range(-5, 6);
             zPoint = Random.Range(-5, 6);
-            Instantiate(PonyObject, new Vector3(xPoint, -4, zPoint), Quaternion.identity);
+            Instantiate(PonyObject, new Vector3(xPoint, 0, zPoint), Quaternion.identity);
             yield return new WaitForSeconds(1);
             EnemyCount++;
         }
