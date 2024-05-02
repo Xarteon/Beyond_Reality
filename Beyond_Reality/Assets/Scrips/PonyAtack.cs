@@ -7,6 +7,7 @@ public class PonyAtack : MonoBehaviour
 {
     private GameObject PointReference;
     [SerializeField] private float Speed;
+    [SerializeField] private GameObject[] Cubos;
     // Start is called before the first frame update
     void Start()
     {
