@@ -5,18 +5,17 @@ using UnityEngine;
 
 public class HealthcareSystem : MonoBehaviour
 {
-    public float Health = 21f;
+    public float Health;
     public float Damage = 10f;
     public float HealthRecuperation = 25f;
     //public PlayerController playerController;
-    public SpawnSystem spawnSystem;
     private void Update()
     {
-        Health = Mathf.Min(Health, 100); // Limitar a Health a un máximo de 100
-        Health = Mathf.Max(Health, 0);
+       // Health = Mathf.Min(Health, 100);
+       // Health = Mathf.Max(Health, 0);
         if (Health <= 0)
         {
-            spawnSystem.DeadPlayer();
+            Destroy(gameObject);
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -26,11 +25,11 @@ public class HealthcareSystem : MonoBehaviour
             Health -= Damage;
         }
     }
-    private void OnTriggerStay(Collider collider)
-    {
-        if (collider.gameObject.CompareTag("Pits"))
-        {
-            Health += HealthRecuperation * Time.deltaTime;
-        }
-    }
+   /// private void OnTriggerStay(Collider collider)
+    ///{
+       // if (collider.gameObject.CompareTag("Pits"))
+       // {
+     //       Health += HealthRecuperation * Time.deltaTime;
+   //   // }
+   // }
 }

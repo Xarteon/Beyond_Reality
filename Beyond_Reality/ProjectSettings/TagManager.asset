@@ -8,11 +8,13 @@ TagManager:
   - Pits
   - New Respawn
   - Impulso
+  - Enemigo
+  - Point
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - E
   - Water
   - UI
   - 
