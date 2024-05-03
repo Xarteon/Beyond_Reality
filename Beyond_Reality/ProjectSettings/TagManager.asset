@@ -10,6 +10,7 @@ TagManager:
   - Impulso
   - Enemigo
   - Point
+  - INVOKE
   layers:
   - Default
   - TransparentFX
