@@ -11,6 +11,8 @@ TagManager:
   - Enemigo
   - Point
   - INVOKE
+  - Yaces
+  - Pony
   layers:
   - Default
   - TransparentFX
