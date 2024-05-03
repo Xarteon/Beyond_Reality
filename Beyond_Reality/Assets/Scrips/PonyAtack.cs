@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PonyAtack : MonoBehaviour
 {
-    private GameObject Invoke;
     private GameObject PointReference;
     [SerializeField] private float Speed;
     [SerializeField] private GameObject[] Cubos;
