@@ -19,10 +19,10 @@ public class InvokeAtack : MonoBehaviour
     }
     private IEnumerator Spawn()
     {
-        while (EnemyCount < 5)
+        while (EnemyCount < 10)
         {
-            xPoint = Random.Range(-5, 6);
-            zPoint = Random.Range(-5, 6);
+            xPoint = Random.Range(-10,10);
+            zPoint = Random.Range(-10, 10);
             int randomIndex = Random.Range(0, PonyObject.Length);
             if (gameObject.CompareTag("Yaces"))
             {
@@ -30,8 +30,7 @@ public class InvokeAtack : MonoBehaviour
             }
             else
             { Instantiate(PonyObject[randomIndex], new Vector3(xPoint, 0, zPoint), Quaternion.identity); }
-
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
             EnemyCount++;
         }
     }
