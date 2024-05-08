@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Move();
+        Move(); 
     }
 
     void Move()
@@ -26,7 +27,9 @@ public class PlayerController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         transform.Rotate(0, horizontal * Time.deltaTime * 90, 0);
+
         rb.velocity = new Vector3(transform.forward.x * vertical * speed, rb.velocity.y, transform.forward.z * vertical * speed);
+
 
         if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift))
         {
