@@ -37,13 +37,13 @@ public class PlayerController : MonoBehaviour
             rb.angularDrag = NormalValueDrift;
         }
     }
-
     private void Rotatio(float horizontal)
     {
         if (rb.velocity.magnitude > 0.01f)
         {
-            rb.constraints = RigidbodyConstraints.None;
+            //rb.constraints = RigidbodyConstraints.None;
             transform.Rotate(0, horizontal * Time.deltaTime * 90, 0);
+            //cuando choque que se parte 
         }
         else
         {
