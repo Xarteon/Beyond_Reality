@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PonyAtack : MonoBehaviour
 {
     private GameObject PointReference;
-    [SerializeField] private float Speed;
-    [SerializeField] private GameObject[] Cubos;
-    // Start is called before the first frame update
+    private GameObject Player;
+    [SerializeField] private float Speed; 
     void Start()
     {
 
         PointReference = GameObject.FindWithTag("Point");
+        Player = GameObject.FindWithTag("Player");
     }
-    // Update is called once per frame
     void Update()
     {
         PonyPersecusion();
@@ -23,9 +23,10 @@ public class PonyAtack : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, PointReference.transform.position, Speed * Time.deltaTime);
     }
+   
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Point")) 
+        if (other.gameObject.CompareTag("Point")|| other.gameObject.CompareTag("Player")) 
         {
             Destroy(gameObject);
         }

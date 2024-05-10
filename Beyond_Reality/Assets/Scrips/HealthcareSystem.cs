@@ -16,7 +16,7 @@ public class HealthcareSystem : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemigo"))
+        if (collision.gameObject.CompareTag("Enemigo") || collision.gameObject.CompareTag("Canicas"))
         {
             Health -= Damage;
         }

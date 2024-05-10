@@ -13,6 +13,8 @@ TagManager:
   - INVOKE
   - Yaces
   - Pony
+  - Canicas
+  - Vida
   layers:
   - Default
   - TransparentFX
