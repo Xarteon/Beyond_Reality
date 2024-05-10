@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Beyond_Reality/Assets/FBX Tutorial.meta
 guid: 566502f76892c974dab3510b38a55a73
+========
+guid: 0f3c5d7e305e3f44e99e5fb0334e7e8f
+>>>>>>>> parent of d39bc6a (OrdenDecarpetas):Beyond_Reality/Assets/Materials.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
