@@ -10,12 +10,10 @@ public class PlayerController : MonoBehaviour
     private float DriftValue = 50;
     private float NormalValueDrift = 1.0f;
     private float PushingForce = 10f;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }
-
     void Update()
     {
         Move(); 

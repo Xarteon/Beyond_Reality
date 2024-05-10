@@ -11,7 +11,7 @@ public class ImpulsoObjet : MonoBehaviour
     void Start()
     {
        Canicas = GameObject.FindWithTag("Canicas");
-      // ReduccionForce = GameObject.FindWithTag("Suelo");
+       ReduccionForce = GameObject.FindWithTag("Suelo");
        rb = GetComponent<Rigidbody>();
         if (gameObject.CompareTag("Canicas")) 
         {
@@ -41,10 +41,6 @@ public class ImpulsoObjet : MonoBehaviour
             Contac = false;
             StartCoroutine(Freezyn());
         }
-    }
-    private void ReboteCanicas() 
-    {
-        rb.AddForce(transform.right * 20f, ForceMode.Impulse);
     }
     IEnumerator Freezyn() 
     {

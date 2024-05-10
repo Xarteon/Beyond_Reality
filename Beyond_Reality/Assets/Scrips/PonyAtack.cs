@@ -7,11 +7,13 @@ using UnityEngine.UIElements;
 public class PonyAtack : MonoBehaviour
 {
     private GameObject PointReference;
+    private GameObject Player;
     [SerializeField] private float Speed; 
     void Start()
     {
 
         PointReference = GameObject.FindWithTag("Point");
+        Player = GameObject.FindWithTag("Player");
     }
     void Update()
     {
@@ -24,7 +26,7 @@ public class PonyAtack : MonoBehaviour
    
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Point")) 
+        if (other.gameObject.CompareTag("Point")|| other.gameObject.CompareTag("Player")) 
         {
             Destroy(gameObject);
         }
